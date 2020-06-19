@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href ="./styles.css">
+    <title>Document</title>
+    <!--<script type = "text/javascript" src = "test.js"></script>-->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Cumulative Negative Binomial Calculator</h1>
+
+    <p></p>
+
+    <p></p>
+
+    
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <form novalidate>
+        <p>
+            <label for="trials">
+                <span>Trials:</span> 
+                <input type="number" required min = "0" step = "1"
+                    id = "trials" name = "trials" pattern = "/d+">
+                <span class = "error" aria-live="polite"></span>
+            </label>
+        </p>
+        <label for="successes">Successes: </label>
+        <input type="number" required min = "0" step = "1" 
+            id = "successes" name = "successes" pattern = "/d+"><br><br>
+        <button type = 'button' id = 'hello'>Click me</button>
+        
+    </form>
+
+
+
+    <script type = "module" src = "./main.js"></script>
+
+    <!--script type = "module"> import * as myProbability from '/myProbability.js';
+        let probArr99 = myProbability.cumulativeNegativeBinomialArr(3000,5,.008)
+    </script-->
+
+
+    <p id="demo"></p>
+
+    <p>Chance to get struck by lightning per year: 1 in 700,000 (.00000143) </p>
+    
+    <p>Chance to win lottery: 1 in 300 million (3.33333333e-9) </p>
+
+    <p></p>
+    
+</body>
+</html>
